@@ -15,7 +15,6 @@ const queryClient = new QueryClient({
   },
 });
 
-
 worker.start({ onUnhandledRequest: "bypass" });
 
 const container = document.getElementById("app");

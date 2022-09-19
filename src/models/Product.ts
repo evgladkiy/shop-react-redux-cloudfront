@@ -7,6 +7,7 @@ export const ProductSchema = Yup.object({
   price: Yup.number().positive().required().defined().default(0),
   weight: Yup.number().positive().required().defined().default(0),
   img: Yup.string().required().default(""),
+  count: Yup.number().positive().required().defined().default(0),
 });
 
 export const AvailableProductSchema = ProductSchema.shape({

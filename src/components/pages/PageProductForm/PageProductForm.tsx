@@ -21,6 +21,7 @@ export default function PageProductForm() {
   const invalidateAvailableProducts = useInvalidateAvailableProducts();
   const removeProductCache = useRemoveProductCache();
   const { data, isLoading } = useAvailableProduct(id);
+
   const { mutateAsync: upsertAvailableProduct } = useUpsertAvailableProduct();
   const onSubmit = (values: AvailableProduct) => {
     const formattedValues = AvailableProductSchema.cast(values);
@@ -68,6 +69,16 @@ export default function PageProductForm() {
                 <Grid item xs={12}>
                   <Field
                     component={TextField}
+                    name="img"
+                    label="Image"
+                    fullWidth
+                    autoComplete="off"
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Field
+                    component={TextField}
                     name="description"
                     label="Description"
                     fullWidth
@@ -81,6 +92,16 @@ export default function PageProductForm() {
                     component={TextField}
                     name="price"
                     label="Price ($)"
+                    fullWidth
+                    autoComplete="off"
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <Field
+                    component={TextField}
+                    name="weight"
+                    label="Weight"
                     fullWidth
                     autoComplete="off"
                     required

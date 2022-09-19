@@ -9,13 +9,13 @@ import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import { formatAsPrice } from "~/utils/utils";
 import {
-  useAvailableProducts,
+  useProducts,
   useDeleteAvailableProduct,
   useInvalidateAvailableProducts,
 } from "~/queries/products";
 
 export default function ProductsTable() {
-  const { data = [] } = useAvailableProducts();
+  const { data = [] } = useProducts();
   const { mutate: deleteAvailableProduct } = useDeleteAvailableProduct();
   const invalidateAvailableProducts = useInvalidateAvailableProducts();
 
@@ -26,6 +26,7 @@ export default function ProductsTable() {
           <TableRow>
             <TableCell>Title</TableCell>
             <TableCell align="right">Description</TableCell>
+            <TableCell align="right">Weight</TableCell>
             <TableCell align="right">Price</TableCell>
             <TableCell align="right">Count</TableCell>
             <TableCell align="right">Action</TableCell>
@@ -38,6 +39,7 @@ export default function ProductsTable() {
                 {product.title}
               </TableCell>
               <TableCell align="right">{product.description}</TableCell>
+              <TableCell align="right">{product.weight}</TableCell>
               <TableCell align="right">
                 {formatAsPrice(product.price)}
               </TableCell>
