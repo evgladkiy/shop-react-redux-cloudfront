@@ -21,19 +21,23 @@ export const availableProducts: AvailableProduct[] = products.map(
 export const cart: CartItem[] = [
   {
     product: {
-      description: "Short Product Description1",
-      id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
-      price: 24,
-      title: "ProductOne",
+      id: "6302b53b1f7d15ecfb052f55",
+      title: "Mizuno Wave Momentum 2",
+      description: "Stay on top of your game from start to finish with the new Momentum 2's unprecedented comfort and cushioning. This volleyball shoe features the latest MIZUNO ENERZY technology for enhanced cushioning and response, as well as the well-known Mizuno Wave for stability and cushioning at the heel. In addition, the new eyelet structure brings an optimal fit and reduces stress with no pressure points.",
+      price: 119.96,
+      weight: 345,
+      img: "https://dlbqczpap4fan.cloudfront.net/momentum.png"
     },
     count: 2,
   },
   {
     product: {
-      description: "Short Product Description7",
-      id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
-      price: 15,
-      title: "ProductName",
+      id: "6302b53b1f7d15ecfb052f55",
+      title: "Mizuno Wave Momentum 2",
+      description: "Stay on top of your game from start to finish with the new Momentum 2's unprecedented comfort and cushioning. This volleyball shoe features the latest MIZUNO ENERZY technology for enhanced cushioning and response, as well as the well-known Mizuno Wave for stability and cushioning at the heel. In addition, the new eyelet structure brings an optimal fit and reduces stress with no pressure points.",
+      price: 119.96,
+      weight: 345,
+      img: "https://dlbqczpap4fan.cloudfront.net/momentum.png"
     },
     count: 5,
   },
